@@ -1,0 +1,151 @@
+body {
+    background-color: #EDF2F8;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: "Quicksand", sans-serif;
+    color: #6d7f97;
+}
+
+/* CONTAINERS */
+
+#main {
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.container {
+    width: 50%;
+    height: auto;
+    align-items: flex-start;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0;
+}
+
+.img {
+    width: 40%;
+    float: left;
+}
+
+.preview {
+    width: 50%;
+    padding: 2%;
+    float: left;
+    background-color: #FFFFFF;
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    padding-top: 0.5rem;
+}
+
+.author {
+    width: 90%;
+    display: inline-block;
+    padding-left: 0.5rem;
+}
+
+.button {
+    width: 10%;
+    float: right;
+}
+
+/* TEXT */
+
+h2 {
+    font-size: 1.5rem;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 700;
+    color: #48556a;
+}
+
+b, strong {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 700;
+    color: #48556a;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/* BUTTONS */
+.share {
+    background-color: #EDF2F8;
+    border: none;
+    color: #48556a;
+    padding: 1rem;
+    display: inline-block;
+    border-radius:  50%;
+    background-image: url('images/icon-share.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.share:hover {
+    background-color: #6E809A;
+    color: #fff;
+    background-image: url('images/icon-share.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+}
+
+/* IMAGES */
+.thumbnail {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem 0 0 0.5rem;
+    display: block;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+@media (min-width: 320px) and (max-width: 1023px) {
+.container {
+    width: 50%;
+        margin: 25%;
+        display: flex;
+        border-radius: 2rem;
+        background-color: #FFFFFF;
+    }
+
+    .img {
+        width: 100%;
+    }
+
+    .thumbnail {
+        width: 300px;
+        height: 200px;
+    }
+
+    .preview {
+        width: 100%;
+        padding: 2% 4%;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+
+}
+
+.attribution {
+        font-size: 11px;
+        text-align: center;
+        width: 100%;
+    }
+
+.attribution a {
+        color: hsl(228, 45%, 44%);
+    }
