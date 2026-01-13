@@ -33,7 +33,7 @@ body {
 }
 
 .preview {
-    width: 50%;
+    width: 52%;
     padding: 2%;
     float: left;
     background-color: #FFFFFF;
@@ -72,10 +72,6 @@ b, strong {
     color: #48556a;
 }
 
-p {
-    margin: 0;
-    padding: 0;
-}
 
 /* BUTTONS */
 .share {
