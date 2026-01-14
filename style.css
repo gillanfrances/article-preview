@@ -19,7 +19,8 @@ body {
 }
 
 .container {
-    width: 70%;
+    min-width: 50%;
+    max-width: 1000px;
     height: auto;
     align-items: flex-start;
     margin: 0 auto;
@@ -27,36 +28,35 @@ body {
     justify-content: space-evenly;
     padding: 0;
     box-shadow: 2px 2px 10% #48556a;
+    flex-basis: 0%;
 }
 
 .img {
-    width: 35%;
     float: left;
     object-fit: cover;
-    flex: 100%;
+    width: 32%;
+    height: 100%;
 }
 
 .preview {
-    width: 56%;
     float: left;
     background-color: #FFFFFF;
     border-radius: 0 0.5rem 0.5rem 0;
     z-index: 1;
-    padding: 3%;
+    padding: 0.25rem;
+    width: 60%;
 }
 
 .details {
-    display: flex;
     align-items: center;
     padding-top: 0.5rem;
+    display: flex;
+    justify-content: center;
 }
 
-.details expanded {
-    padding-top: 0;
-}
 
 .author {
-    width: 90%;
+    width: 80%;
     display: inline-block;
     padding-left: 0.5rem;
 }
@@ -64,22 +64,21 @@ body {
 .button {
     width: 10%;
     float: right;
-    margin-top: 1rem;
 }
 
 .share-options {
     z-index: 10;
     width: 200px;
     height: auto;
-         background-color: #48556a;
+    background-color: #48556a;
     padding: 1rem;
     border-radius: 0.5rem;
     color: #9eafc2;
     text-transform: uppercase;
     letter-spacing: 0.4rem;
-    top: 35%;
-    left: 70%;
-    position: absolute; 
+    top: 30%;
+    left: 62%;
+    position: absolute;
     display: flex;
     gap: 20px;
     justify-content: center;
@@ -96,7 +95,8 @@ h2 {
     color: #48556a;
 }
 
-b, strong {
+b,
+strong {
     font-family: "Quicksand", sans-serif;
     font-weight: 700;
     color: #48556a;
@@ -110,18 +110,19 @@ b, strong {
     color: #48556a;
     padding: 1rem;
     display: inline-block;
-    border-radius:  50%;
+    border-radius: 50%;
     background-image: url('images/icon-share.svg');
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.share:hover, .share:active {
+.share:hover,
+.share:active {
     background-color: #6E809A;
     color: #fff;
     background-image: url('images/icon-share.svg');
-        background-repeat: no-repeat;
-        background-position: center;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 /* IMAGES */
@@ -139,9 +140,9 @@ b, strong {
 }
 
 @media (min-width: 320px) and (max-width: 1024px) {
-.container {
-    flex-direction: column;
-    width: 50%;
+    .container {
+        flex-direction: column;
+        width: 50%;
     }
 
     .img {
@@ -156,39 +157,78 @@ b, strong {
     }
 
     .thumbnail {
-        border-radius: 0.5rem 0.5rem 0 0 ;
+        border-radius: 0.5rem 0.5rem 0 0;
         width: 300px;
     }
+
     .share-options {
-    z-index: 10;
-    width: 200px;
-    height: auto;
-         background-color: #48556a;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    color: #9eafc2;
-    text-transform: uppercase;
-    letter-spacing: 0.4rem;
-    top: 77%;
-    left: 45%;
-    position: absolute; 
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-}
+        z-index: 10;
+        width: 200px;
+        height: auto;
+        background-color: #48556a;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        color: #9eafc2;
+        text-transform: uppercase;
+        letter-spacing: 0.4rem;
+        top: 62%;
+        left: 45%;
+        position: absolute;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
-@media (min-width: 751px) and (max-width: 1440px) {
-
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .container {
+            width: 100%;
+            flex-direction: row;
+        }
+    
+        .img {
+            width: 40%;
+        }
+    
+    
+        .preview {
+            width: 60%;
+            border-radius: 0 0 0.5rem 0.5rem;
+            padding: 20px;
+        }
+    
+        .thumbnail {
+            border-radius: 0.5rem 0.5rem 0 0;
+            width: 300px;
+        }
+    
+        .share-options {
+            z-index: 10;
+            width: 200px;
+            height: auto;
+            background-color: #48556a;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            color: #9eafc2;
+            text-transform: uppercase;
+            letter-spacing: 0.4rem;
+            top: 62%;
+            left: 45%;
+            position: absolute;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
 }
 
 .attribution {
-        font-size: 11px;
-        text-align: center;
-        width: 100%;
-    }
+    font-size: 11px;
+    text-align: center;
+    width: 100%;
+}
 
 .attribution a {
-        color: hsl(228, 45%, 44%);
-    }
+    color: hsl(228, 45%, 44%);
+}
